@@ -1,0 +1,19 @@
+{
+  "name": "project-angular-express",
+  "version": "1.0.0",
+  "description": "Projeto-Angular-Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wendril-Costa/Project-Angular-Express.git"
+  },
+  "author": "Wendril",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wendril-Costa/Project-Angular-Express/issues"
+  },
+  "homepage": "https://github.com/Wendril-Costa/Project-Angular-Express#readme"
+}
