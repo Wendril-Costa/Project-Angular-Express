@@ -1,8 +1,12 @@
 {
     "env": {
         "es2021": true,
-        "node": true
+        "node": true,
+        "mocha": true
     },
+    "globals": {
+        "expect": true
+    },    
     "extends": "eslint:recommended",
     "overrides": [
     ],
