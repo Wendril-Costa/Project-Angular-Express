@@ -1,11 +1,10 @@
 const { expect } = require('chai');
-// const chaiHttp = require('chai-http');
 const { Influencer } = require('../database/models');
 const sinon = require('sinon');
 const { StatusCodes } = require('http-status-codes');
 const { influencerController } = require('../controllers/influencerController');
 const { influencerService } = require('../services/influencerService');
-const influencerValidations = require('../middlewares/influencerMiddleware');
+const influencerValidations = require('../middlewares/influencerCreate');
 
 
 describe('Influencer Create Tests', () => {

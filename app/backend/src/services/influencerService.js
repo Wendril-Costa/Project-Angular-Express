@@ -6,6 +6,12 @@ const influencerService = {
         await Influencer.create(register); 
         return { code: StatusCodes.CREATED };
     },
+
+    findAll: async () => {
+        const influencers = await Influencer
+            .findAll({attributes: { exclude: ['createdAt', 'updatedAt'] } });
+        return { code: StatusCodes.OK, influencers };
+    },
 }
 
 module.exports = {
