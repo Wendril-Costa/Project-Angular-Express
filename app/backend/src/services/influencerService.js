@@ -12,6 +12,16 @@ const influencerService = {
             .findAll({attributes: { exclude: ['createdAt', 'updatedAt'] } });
         return { code: StatusCodes.OK, influencers };
     },
+
+    update: async (id, updates) => {
+        await Influencer.update(updates, { where: { id } });
+        return { code: StatusCodes.OK };
+    },
+
+    delete: async (id) => {
+        await Influencer.destroy({ where: { id } });
+        return { code: StatusCodes.OK };
+    },
 }
 
 module.exports = {

@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const sinon = require('sinon');
 const { influencerController } = require('../controllers/influencerController');
 const { influencerService } = require('../services/influencerService');
-const influencerFindAllMiddleware = require('../middlewares/influencerFindAll');
+const influencerFindAll = require('../middlewares/influencerFindAll');
 const { Influencer } = require('../database/models');
 
 describe('Influencer FindAll', () => {
@@ -64,7 +64,7 @@ describe('Influencer FindAll', () => {
       };
       const next = sinon.stub();
   
-      await influencerFindAllMiddleware(req, res, next);
+      await influencerFindAll(req, res, next);
   
       expect(findAllStub.calledOnce).to.be.true;
       expect(res.locals.influencers).to.deep.equal(influencers);
@@ -83,7 +83,7 @@ describe('Influencer FindAll', () => {
       };
       const next = sinon.stub();
   
-      await influencerFindAllMiddleware(req, res, next);
+      await influencerFindAll(req, res, next);
   
       expect(findAllStub.calledOnce).to.be.true;
       expect(res.status.calledWith(404)).to.be.true;
@@ -104,7 +104,7 @@ describe('Influencer FindAll', () => {
       };
       const next = sinon.stub();
   
-      await influencerFindAllMiddleware(req, res, next);
+      await influencerFindAll(req, res, next);
   
       expect(findAllStub.calledOnce).to.be.true;
       expect(res.status.calledWith(500)).to.be.true;

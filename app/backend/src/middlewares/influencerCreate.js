@@ -2,8 +2,8 @@ const Joi = require('joi');
 const { StatusCodes } = require('http-status-codes');
 const { Influencer } = require('../database/models');
 
-const influencerValidations = {
-  validateCreate: (req, res, next) => {
+const influencerValid = {
+  validateBody: (req, res, next) => {
     const schema = Joi.object({
       name: Joi.string().required().error(new Error('O nome é obrigatório.')),
       email: Joi.string()
@@ -45,4 +45,4 @@ const influencerValidations = {
   }
 };
 
-module.exports = influencerValidations;
+module.exports = influencerValid;
