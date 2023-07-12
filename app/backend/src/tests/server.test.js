@@ -8,8 +8,6 @@ const url = 'http://localhost:3001'
 describe('Teste de rota basica', () => {
   it('Deve Retornar um status 200 e uma mensagem "Ok"', async () => {
     const response = await chai.request(url).get('/');
-    console.log(response.status, response.text)
-
     expect(response.status).to.equal(200);
     expect(response.text).to.equal('Ok');
   });
